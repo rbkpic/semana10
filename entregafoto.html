@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Apuntes de clase</title>
+</head>
+<body>
+
+    <h1>Dibujo sobre nodos en lista anidada</h1>
+
+    <label for="clase">Nombre de la asignatura:</label>
+    <br>
+    <input type="text" id="clase" placeholder="Progrmacion Estructurada">
+
+    <br><br>
+
+    <label for="tema">Tema:</label>
+    <br>
+    <input type="text" id="tema" placeholder="Listas anidadas">
+
+    <br><br>
+
+    <label for="foto">Imagen del dibujo de las operaciones en listas anidadasgit:</label>
+    <br>
+    <input type="file" id="foto" accept="image/*">
+
+    <br><br>
+
+    <img id="vistaPrevia" alt="Vista previa de la foto" width="300">
+
+    <script>
+        const foto = document.getElementById("foto");
+        const vistaPrevia = document.getElementById("vistaPrevia");
+
+        foto.addEventListener("change", function() {
+            const archivo = foto.files[0];
+
+            if (archivo) {
+                vistaPrevia.src = URL.createObjectURL(archivo);
+            }
+        });
+    </script>
+
+</body>
+</html>
